@@ -1,0 +1,8 @@
+temp-plot.html
+
+__pycache__/
+
+.ipynb_checkpoints/
+*.log
+*.bat
+debug*
