@@ -1,46 +1,11 @@
 import plotly.graph_objs as go
 from plotly.offline import plot
 import time
-from functions import line_intersect
-from functions import draw_candlestick
-
-tickers = ['BTC-USD', # bitcoin
-           'XAU=F', # gold
-           'XAG-USD', # silver
-           'GC=F', # gold futures
-           'TSLA', # tesla
-           '^GSPC', # s&p500
-           'XRP-USD', # ripple
-           'XLM-USD', # stellar
-           'BCH-USD', # bitcoin cash
-           'ETH-USD', # ether
-           'LTC-USD', # litecoin
-           'DASH-USD', # dash
-           'EOS-USD', # eos
-           'ETC-USD', # ethereum classic    
-           'ZEC-USD' # Zcash
-           ]
-
-deltastock = ['USDJPY=X', 'XLM-USD', 'ZEC-USD']
-
-pos = ['BCH-USD', 'DASH-USD', 'EOS-USD', 'ETC-USD', 'ETH-USD', 'LTC-USD', 'XLM-USD', 'ZEC-USD',]
-
-
-# for t in pos:
-#     fig = draw_candlestick(ticker=t, period='7d', interval='15m')    
-#     plot(fig)
-#     time.sleep(2)
-
-
-
-
-
-
-
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import dash_bootstrap_components as dbc
+from functions import line_intersect, draw_candlestick
 
 
 app = dash.Dash(
@@ -911,19 +876,13 @@ footer = html.Div(
 
 app.layout = html.Div([
     html.H1(children='Financial markets - Candlesticks', style={'padding-left':'5px'}),
-    #html.P(f"Last update: {covid_general.date.tail(1).dt.date.values[0].strftime('%d-%b-%Y')}", style={'textAlign':'left', 'padding-left':'15px', 'color':'gold', 'font-style':'italic'}),
-    #cards,
     html.Br(),
-    #dbc.CardDeck(className="carddeck", children=[
-    #    dbc.Card([
-    #        dcc.Graph(figure=fig_gauges)
-    #    ])
-    #]),
+    html.H6('A web app that downloads the latest financial markets data, draws a candlestick graph for each ticker and puts breakeven points for potentially good moments for short/long positions.'),
+    html.Br(),
     tabs,
     footer
 ])
 
-import yfinance as yf
 
 # callbacks
 @app.callback(
@@ -1056,7 +1015,7 @@ def update_usdjpy(interval, period):
 def update_usdeur(interval, period):
     period = f'{str(period)}d'
     fig = draw_candlestick(ticker='USDEUR=X', period=period, interval=interval)
-    return 
+    return fig
 
 @app.callback(
         dash.dependencies.Output('output_usdgbp', 'figure'),

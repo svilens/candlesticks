@@ -113,7 +113,7 @@ def draw_candlestick(ticker, period='8d', interval='1h'):
             
         )
     )
-    fig.update_layout(title=ticker, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
+    fig.update_layout(title=f'Ticker: {ticker}', paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
     
     # add breakeven points with the respective coloring
     for i, breakeven in list(enumerate(breakevens)):
