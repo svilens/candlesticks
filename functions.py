@@ -33,7 +33,7 @@ def draw_candlestick(ticker, period='8d', interval='1h'):
     data['MA5'] = data['Close'].rolling(5).mean()
     data['MA20'] = data['Close'].rolling(20).mean()
     
-    df = data[['MA5', 'MA20']].reset_index().rename(columns={'index':'time', 'Datetime':'time'})
+    df = data[['MA5', 'MA20']].reset_index().rename(columns={'index':'time', 'Datetime':'time', 'Date':'time'})
     
     # identify the times when short-term moving avg intersects the long-term one
     x_positions = [x for x in range(len(df))]

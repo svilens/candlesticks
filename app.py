@@ -877,7 +877,7 @@ footer = html.Div(
 app.layout = html.Div([
     html.H1(children='Financial markets - Candlesticks', style={'padding-left':'5px'}),
     html.Br(),
-    html.H6('A web app that downloads the latest financial markets data, draws a candlestick graph for each ticker and puts breakeven points for potentially good moments for short/long positions.'),
+    html.H6('A web app that downloads the latest financial markets data, draws a candlestick graph for each ticker and puts breakeven points for potentially good moments for short/long positions. All timezones are converted to GMT+3.'),
     html.Br(),
     tabs,
     footer
