@@ -53,7 +53,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -62,7 +62,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -87,7 +87,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -96,7 +96,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -121,7 +121,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -130,7 +130,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -155,7 +155,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -164,7 +164,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -189,7 +189,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -198,7 +198,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -223,7 +223,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -232,7 +232,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -257,7 +257,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -266,7 +266,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -291,7 +291,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -300,7 +300,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -325,7 +325,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -334,7 +334,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -359,7 +359,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -368,7 +368,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -402,7 +402,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -411,7 +411,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -436,7 +436,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -445,7 +445,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -470,7 +470,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -479,7 +479,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -504,7 +504,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -513,7 +513,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -538,7 +538,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -547,7 +547,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -572,7 +572,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -581,7 +581,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -606,7 +606,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -615,7 +615,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -640,7 +640,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -649,7 +649,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -682,7 +682,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -691,7 +691,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -716,7 +716,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -725,7 +725,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -750,7 +750,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -759,7 +759,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -792,7 +792,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -801,7 +801,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
@@ -834,7 +834,7 @@ tabs = html.Div([
                                 className='dropdown',
                                 options=options_interval,
                                 placeholder='Select time interval',
-                                value='1h',
+                                value='1d',
                                 style=dict(width='50%')
                             ),
                             dcc.Input(
@@ -843,7 +843,7 @@ tabs = html.Div([
                                 type='number',
                                 placeholder='Select period (days)',
                                 style=dict(width='20%'),
-                                value=8, min=1, max=100000, step=1,
+                                value=100, min=1, max=100000, step=1,
                                 debounce=True # press Enter to send the input
                             )
                         ]),
