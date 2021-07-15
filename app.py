@@ -870,7 +870,7 @@ footer = html.Div(
         html.Small("Designed by "),
         html.Small(html.A("Svilen Stefanov", href="https://www.linkedin.com/in/svilen-stefanov/", target="_blank")),
         html.Br(),
-        html.Small(html.A("Source code", href="https://github.com/svilens/covid-bulgaria/", target="_blank")),
+        html.Small(html.A("Source code", href="https://github.com/svilens/candlesticks/", target="_blank")),
     ], style={'font-style':'italic', 'padding-left':'10px', 'textAlign':'center'}
 )
 
