@@ -1158,7 +1158,7 @@ def update_tsla(interval, period):
     ])
 def update_expn(interval, period):
     period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='EXPN', period=period, interval=interval)
+    fig = draw_candlestick(ticker='EXPN.L', period=period, interval=interval)
     return fig
 
 @app.callback(
@@ -1186,4 +1186,4 @@ def update_sp500(interval, period):
 server = app.server
 
 if __name__ == '__main__':
-    app.run_server(debug=False, use_reloader=False)
+    app.run_server(debug=True, use_reloader=False)
