@@ -773,6 +773,40 @@ tabs = html.Div([
                         ]),
                         html.Br()
                     ]),
+                    html.Br(),
+                    html.H4('Experian'),
+                    html.Br(),
+                    html.Div([
+                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                        html.Div(className='dropdown', children=[
+                            dcc.Dropdown(
+                                id='interval_expn',
+                                className='dropdown',
+                                options=options_interval,
+                                placeholder='Select time interval',
+                                value='1d',
+                                style=dict(width='50%')
+                            ),
+                            dcc.Input(
+                                id='period_expn',
+                                className='dropdown',
+                                type='number',
+                                placeholder='Select period (days)',
+                                style=dict(width='20%'),
+                                value=100, min=1, max=100000, step=1,
+                                debounce=True # press Enter to send the input
+                            )
+                        ]),
+                        html.Div([
+                            dcc.Loading(
+                                id='output_loader_expn', type='default',
+                                children=[
+                                    html.Div(dcc.Graph(id="output_expn"))
+                                ]
+                            )
+                        ]),
+                        html.Br()
+                    ]),
                 ]
             ),
             dcc.Tab(
@@ -1114,6 +1148,17 @@ def update_msft(interval, period):
 def update_tsla(interval, period):
     period = f'{str(period)}d'
     fig = draw_candlestick(ticker='TSLA', period=period, interval=interval)
+    return fig
+
+@app.callback(
+        dash.dependencies.Output('output_expn', 'figure'),
+    [
+        dash.dependencies.Input('interval_expn', 'value'),
+        dash.dependencies.Input('period_expn', 'value')
+    ])
+def update_expn(interval, period):
+    period = f'{str(period)}d'
+    fig = draw_candlestick(ticker='EXPN', period=period, interval=interval)
     return fig
 
 @app.callback(
