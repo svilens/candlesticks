@@ -55,7 +55,7 @@ def draw_candlestick(ticker, period='8d', interval='1h'):
             intersect = line_intersect(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2)
             
             if intersect != None:
-                breakevens.append(df['time'][x_pos])
+                breakevens.append(df['time'][x_pos-1])
     
     # for each breakeven point define whether it's a buy or sell advice
     labels = []
