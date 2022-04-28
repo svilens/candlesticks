@@ -280,537 +280,537 @@ tabs = html.Div([
                         ]),
                         html.Br()
                     ]),
-                    html.Br(),
-                    html.H4('Dash'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_dash',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_dash',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_dash', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_dash"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.Br(),
-                    html.H4('EOS'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_eos',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_eos',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_eos', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_eos"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.Br(),
-                    html.H4('Zcash'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_zec',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_zec',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_zec', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_zec"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.H4('0x'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_zrx',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_zrx',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_zrx', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_zrx"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.H4('Aave'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_aave',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_aave',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_aave', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_aave"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.H4('Algorand'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_algo',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_algo',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_algo', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_algo"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.H4('Ankr'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_ankr',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_ankr',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_ankr', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_ankr"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.H4('Bancor'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_bnt',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_bnt',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_bnt', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_bnt"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.H4('Band Protocol'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_band',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_band',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_band', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_band"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.H4('Basic Attention Token'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_bat',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_bat',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_bat', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_bat"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.H4('Cardano'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_ada',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_ada',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_ada', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_ada"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.H4('Celo'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_celo',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_celo',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_celo', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_celo"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.H4('Chainlink'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_link',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_link',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_link', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_link"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.H4('Compound'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_comp',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_comp',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_comp', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_comp"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.H4('Curve Finance'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_crv',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_crv',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_crv', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_crv"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.H4('Decentraland'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_mana',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_mana',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_mana', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_mana"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
+                    # html.Br(),
+                    # html.H4('Dash'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_dash',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_dash',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_dash', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_dash"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.Br(),
+                    # html.H4('EOS'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_eos',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_eos',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_eos', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_eos"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.Br(),
+                    # html.H4('Zcash'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_zec',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_zec',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_zec', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_zec"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.H4('0x'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_zrx',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_zrx',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_zrx', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_zrx"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.H4('Aave'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_aave',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_aave',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_aave', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_aave"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.H4('Algorand'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_algo',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_algo',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_algo', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_algo"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.H4('Ankr'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_ankr',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_ankr',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_ankr', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_ankr"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.H4('Bancor'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_bnt',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_bnt',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_bnt', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_bnt"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.H4('Band Protocol'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_band',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_band',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_band', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_band"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.H4('Basic Attention Token'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_bat',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_bat',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_bat', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_bat"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.H4('Cardano'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_ada',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_ada',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_ada', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_ada"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.H4('Celo'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_celo',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_celo',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_celo', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_celo"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.H4('Chainlink'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_link',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_link',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_link', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_link"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.H4('Compound'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_comp',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_comp',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_comp', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_comp"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.H4('Curve Finance'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_crv',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_crv',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_crv', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_crv"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.H4('Decentraland'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_mana',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_mana',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_mana', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_mana"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
                     html.H4('DogeCoin'),
                     html.Br(),
                     html.Div([
@@ -1829,346 +1829,346 @@ tabs = html.Div([
                         ]),
                         html.Br()
                     ]),
-                    html.Br(),
-                    html.H4('Devon Energy Corp'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_dvn',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_dvn',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_dvn', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_dvn"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.Br(),
-                    html.H4('Antero Resources'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_ar',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_ar',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_ar', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_ar"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.Br(),
-                    html.H4('Alcoa'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_aa',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_aa',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_aa', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_aa"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.Br(),
-                    html.H4('Freeport-McMoRan'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_fcx',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_fcx',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_fcx', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_fcx"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.Br(),
-                    html.H4('ExxonMobil'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_xom',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_xom',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_xom', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_xom"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.Br(),
-                    html.H4('Glencore'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_glncy',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_glncy',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_glncy', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_glncy"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.Br(),
-                    html.H4('Antero Midstream Corp'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_am',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_am',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_am', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_am"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.Br(),
-                    html.H4('Agnico Eagle Mines'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_aem',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_aem',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_aem', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_aem"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.Br(),
-                    html.H4('Apache'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_apa',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_apa',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_apa', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_apa"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
-                    html.Br(),
-                    html.H4('Arconic'),
-                    html.Br(),
-                    html.Div([
-                        html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
-                        html.Div(className='dropdown', children=[
-                            dcc.Dropdown(
-                                id='interval_arnc',
-                                className='dropdown',
-                                options=options_interval,
-                                placeholder='Select time interval',
-                                value='1d',
-                                style=dict(width='50%')
-                            ),
-                            dcc.Input(
-                                id='period_arnc',
-                                className='dropdown',
-                                type='number',
-                                placeholder='Select period (days)',
-                                style=dict(width='20%'),
-                                value=100, min=1, max=100000, step=1,
-                                debounce=True # press Enter to send the input
-                            )
-                        ]),
-                        html.Div([
-                            dcc.Loading(
-                                id='output_loader_arnc', type='default',
-                                children=[
-                                    html.Div(dcc.Graph(id="output_arnc"))
-                                ]
-                            )
-                        ]),
-                        html.Br()
-                    ]),
+                    # html.Br(),
+                    # html.H4('Devon Energy Corp'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_dvn',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_dvn',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_dvn', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_dvn"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.Br(),
+                    # html.H4('Antero Resources'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_ar',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_ar',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_ar', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_ar"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.Br(),
+                    # html.H4('Alcoa'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_aa',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_aa',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_aa', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_aa"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.Br(),
+                    # html.H4('Freeport-McMoRan'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_fcx',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_fcx',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_fcx', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_fcx"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.Br(),
+                    # html.H4('ExxonMobil'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_xom',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_xom',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_xom', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_xom"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.Br(),
+                    # html.H4('Glencore'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_glncy',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_glncy',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_glncy', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_glncy"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.Br(),
+                    # html.H4('Antero Midstream Corp'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_am',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_am',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_am', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_am"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.Br(),
+                    # html.H4('Agnico Eagle Mines'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_aem',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_aem',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_aem', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_aem"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.Br(),
+                    # html.H4('Apache'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_apa',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_apa',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_apa', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_apa"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
+                    # html.Br(),
+                    # html.H4('Arconic'),
+                    # html.Br(),
+                    # html.Div([
+                    #     html.P('Select time interval from the dropdown below and specify the length of the historical period in days.'),
+                    #     html.Div(className='dropdown', children=[
+                    #         dcc.Dropdown(
+                    #             id='interval_arnc',
+                    #             className='dropdown',
+                    #             options=options_interval,
+                    #             placeholder='Select time interval',
+                    #             value='1d',
+                    #             style=dict(width='50%')
+                    #         ),
+                    #         dcc.Input(
+                    #             id='period_arnc',
+                    #             className='dropdown',
+                    #             type='number',
+                    #             placeholder='Select period (days)',
+                    #             style=dict(width='20%'),
+                    #             value=100, min=1, max=100000, step=1,
+                    #             debounce=True # press Enter to send the input
+                    #         )
+                    #     ]),
+                    #     html.Div([
+                    #         dcc.Loading(
+                    #             id='output_loader_arnc', type='default',
+                    #             children=[
+                    #                 html.Div(dcc.Graph(id="output_arnc"))
+                    #             ]
+                    #         )
+                    #     ]),
+                    #     html.Br()
+                    # ]),
                     
 
                 ]
@@ -2360,181 +2360,181 @@ def update_xlm(interval, period):
     fig = draw_candlestick(ticker='XLM-USD', period=period, interval=interval)
     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_dash', 'figure'),
-    [
-        dash.dependencies.Input('interval_dash', 'value'),
-        dash.dependencies.Input('period_dash', 'value')
-    ])
-def update_dash(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='DASH-USD', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_dash', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_dash', 'value'),
+#         dash.dependencies.Input('period_dash', 'value')
+#     ])
+# def update_dash(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='DASH-USD', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_eos', 'figure'),
-    [
-        dash.dependencies.Input('interval_eos', 'value'),
-        dash.dependencies.Input('period_eos', 'value')
-    ])
-def update_eos(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='EOS-USD', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_eos', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_eos', 'value'),
+#         dash.dependencies.Input('period_eos', 'value')
+#     ])
+# def update_eos(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='EOS-USD', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_zec', 'figure'),
-    [
-        dash.dependencies.Input('interval_zec', 'value'),
-        dash.dependencies.Input('period_zec', 'value')
-    ])
-def update_zec(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='ZEC-USD', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_zec', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_zec', 'value'),
+#         dash.dependencies.Input('period_zec', 'value')
+#     ])
+# def update_zec(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='ZEC-USD', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_zrx', 'figure'),
-    [
-        dash.dependencies.Input('interval_zrx', 'value'),
-        dash.dependencies.Input('period_zrx', 'value')
-    ])
-def update_zrx(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='ZRX-USD', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_zrx', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_zrx', 'value'),
+#         dash.dependencies.Input('period_zrx', 'value')
+#     ])
+# def update_zrx(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='ZRX-USD', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_aave', 'figure'),
-    [
-        dash.dependencies.Input('interval_aave', 'value'),
-        dash.dependencies.Input('period_aave', 'value')
-    ])
-def update_aave(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='AAVE-USD', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_aave', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_aave', 'value'),
+#         dash.dependencies.Input('period_aave', 'value')
+#     ])
+# def update_aave(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='AAVE-USD', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_algo', 'figure'),
-    [
-        dash.dependencies.Input('interval_algo', 'value'),
-        dash.dependencies.Input('period_algo', 'value')
-    ])
-def update_algo(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='ALGO-USD', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_algo', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_algo', 'value'),
+#         dash.dependencies.Input('period_algo', 'value')
+#     ])
+# def update_algo(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='ALGO-USD', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_ankr', 'figure'),
-    [
-        dash.dependencies.Input('interval_ankr', 'value'),
-        dash.dependencies.Input('period_ankr', 'value')
-    ])
-def update_ankr(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='ANKR-USD', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_ankr', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_ankr', 'value'),
+#         dash.dependencies.Input('period_ankr', 'value')
+#     ])
+# def update_ankr(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='ANKR-USD', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_bnt', 'figure'),
-    [
-        dash.dependencies.Input('interval_bnt', 'value'),
-        dash.dependencies.Input('period_bnt', 'value')
-    ])
-def update_bnt(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='BNT-USD', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_bnt', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_bnt', 'value'),
+#         dash.dependencies.Input('period_bnt', 'value')
+#     ])
+# def update_bnt(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='BNT-USD', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_band', 'figure'),
-    [
-        dash.dependencies.Input('interval_band', 'value'),
-        dash.dependencies.Input('period_band', 'value')
-    ])
-def update_band(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='BAND-USD', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_band', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_band', 'value'),
+#         dash.dependencies.Input('period_band', 'value')
+#     ])
+# def update_band(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='BAND-USD', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_bat', 'figure'),
-    [
-        dash.dependencies.Input('interval_bat', 'value'),
-        dash.dependencies.Input('period_bat', 'value')
-    ])
-def update_bat(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='BAT-USD', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_bat', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_bat', 'value'),
+#         dash.dependencies.Input('period_bat', 'value')
+#     ])
+# def update_bat(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='BAT-USD', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_ada', 'figure'),
-    [
-        dash.dependencies.Input('interval_ada', 'value'),
-        dash.dependencies.Input('period_ada', 'value')
-    ])
-def update_ada(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='ADA-USD', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_ada', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_ada', 'value'),
+#         dash.dependencies.Input('period_ada', 'value')
+#     ])
+# def update_ada(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='ADA-USD', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_celo', 'figure'),
-    [
-        dash.dependencies.Input('interval_celo', 'value'),
-        dash.dependencies.Input('period_celo', 'value')
-    ])
-def update_celo(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='CELO-USD', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_celo', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_celo', 'value'),
+#         dash.dependencies.Input('period_celo', 'value')
+#     ])
+# def update_celo(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='CELO-USD', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_link', 'figure'),
-    [
-        dash.dependencies.Input('interval_link', 'value'),
-        dash.dependencies.Input('period_link', 'value')
-    ])
-def update_link(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='LINK-USD', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_link', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_link', 'value'),
+#         dash.dependencies.Input('period_link', 'value')
+#     ])
+# def update_link(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='LINK-USD', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_comp', 'figure'),
-    [
-        dash.dependencies.Input('interval_comp', 'value'),
-        dash.dependencies.Input('period_comp', 'value')
-    ])
-def update_comp(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='COMP-USD', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_comp', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_comp', 'value'),
+#         dash.dependencies.Input('period_comp', 'value')
+#     ])
+# def update_comp(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='COMP-USD', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_crv', 'figure'),
-    [
-        dash.dependencies.Input('interval_crv', 'value'),
-        dash.dependencies.Input('period_crv', 'value')
-    ])
-def update_crv(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='CRV-USD', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_crv', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_crv', 'value'),
+#         dash.dependencies.Input('period_crv', 'value')
+#     ])
+# def update_crv(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='CRV-USD', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_mana', 'figure'),
-    [
-        dash.dependencies.Input('interval_mana', 'value'),
-        dash.dependencies.Input('period_mana', 'value')
-    ])
-def update_mana(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='MANA-USD', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_mana', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_mana', 'value'),
+#         dash.dependencies.Input('period_mana', 'value')
+#     ])
+# def update_mana(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='MANA-USD', period=period, interval=interval)
+#     return fig
 
 @app.callback(
         dash.dependencies.Output('output_doge', 'figure'),
@@ -2866,115 +2866,115 @@ def update_expn(interval, period):
     fig = draw_candlestick(ticker='EXPN.L', period=period, interval=interval)
     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_dvn', 'figure'),
-    [
-        dash.dependencies.Input('interval_dvn', 'value'),
-        dash.dependencies.Input('period_dvn', 'value')
-    ])
-def update_dvn(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='DVN', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_dvn', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_dvn', 'value'),
+#         dash.dependencies.Input('period_dvn', 'value')
+#     ])
+# def update_dvn(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='DVN', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_ar', 'figure'),
-    [
-        dash.dependencies.Input('interval_ar', 'value'),
-        dash.dependencies.Input('period_ar', 'value')
-    ])
-def update_ar(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='AR', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_ar', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_ar', 'value'),
+#         dash.dependencies.Input('period_ar', 'value')
+#     ])
+# def update_ar(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='AR', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_aa', 'figure'),
-    [
-        dash.dependencies.Input('interval_aa', 'value'),
-        dash.dependencies.Input('period_aa', 'value')
-    ])
-def update_aa(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='AA', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_aa', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_aa', 'value'),
+#         dash.dependencies.Input('period_aa', 'value')
+#     ])
+# def update_aa(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='AA', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_fcx', 'figure'),
-    [
-        dash.dependencies.Input('interval_fcx', 'value'),
-        dash.dependencies.Input('period_fcx', 'value')
-    ])
-def update_fcx(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='FCX', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_fcx', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_fcx', 'value'),
+#         dash.dependencies.Input('period_fcx', 'value')
+#     ])
+# def update_fcx(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='FCX', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_xom', 'figure'),
-    [
-        dash.dependencies.Input('interval_xom', 'value'),
-        dash.dependencies.Input('period_xom', 'value')
-    ])
-def update_xom(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='XOM', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_xom', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_xom', 'value'),
+#         dash.dependencies.Input('period_xom', 'value')
+#     ])
+# def update_xom(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='XOM', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_glncy', 'figure'),
-    [
-        dash.dependencies.Input('interval_glncy', 'value'),
-        dash.dependencies.Input('period_glncy', 'value')
-    ])
-def update_glncy(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='GLNCY', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_glncy', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_glncy', 'value'),
+#         dash.dependencies.Input('period_glncy', 'value')
+#     ])
+# def update_glncy(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='GLNCY', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_am', 'figure'),
-    [
-        dash.dependencies.Input('interval_am', 'value'),
-        dash.dependencies.Input('period_am', 'value')
-    ])
-def update_am(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='AM', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_am', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_am', 'value'),
+#         dash.dependencies.Input('period_am', 'value')
+#     ])
+# def update_am(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='AM', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_aem', 'figure'),
-    [
-        dash.dependencies.Input('interval_aem', 'value'),
-        dash.dependencies.Input('period_aem', 'value')
-    ])
-def update_aem(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='AEM', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_aem', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_aem', 'value'),
+#         dash.dependencies.Input('period_aem', 'value')
+#     ])
+# def update_aem(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='AEM', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_apa', 'figure'),
-    [
-        dash.dependencies.Input('interval_apa', 'value'),
-        dash.dependencies.Input('period_apa', 'value')
-    ])
-def update_apa(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='APA', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_apa', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_apa', 'value'),
+#         dash.dependencies.Input('period_apa', 'value')
+#     ])
+# def update_apa(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='APA', period=period, interval=interval)
+#     return fig
 
-@app.callback(
-        dash.dependencies.Output('output_arnc', 'figure'),
-    [
-        dash.dependencies.Input('interval_arnc', 'value'),
-        dash.dependencies.Input('period_arnc', 'value')
-    ])
-def update_arnc(interval, period):
-    period = f'{str(period)}d'
-    fig = draw_candlestick(ticker='ARNC', period=period, interval=interval)
-    return fig
+# @app.callback(
+#         dash.dependencies.Output('output_arnc', 'figure'),
+#     [
+#         dash.dependencies.Input('interval_arnc', 'value'),
+#         dash.dependencies.Input('period_arnc', 'value')
+#     ])
+# def update_arnc(interval, period):
+#     period = f'{str(period)}d'
+#     fig = draw_candlestick(ticker='ARNC', period=period, interval=interval)
+#     return fig
 
 @app.callback(
         dash.dependencies.Output('output_gc', 'figure'),
