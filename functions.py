@@ -26,10 +26,10 @@ def draw_candlestick(ticker, period='8d', interval='1h'):
     data = yf.download(tickers=ticker, period=period, interval=interval, threads=False)
     
     # convert time zone
-    try:
-        data.index = data.index.tz_localize('America/New_York').tz_convert('Europe/Sofia')
-    except:
-        data.index = data.index.tz_convert('Europe/Sofia')
+    # try:
+    #     data.index = data.index.tz_localize('America/New_York').tz_convert('Europe/Sofia')
+    # except:
+    #     data.index = data.index.tz_convert('Europe/Sofia')
     
     data['MA5'] = data['Close'].rolling(5).mean()
     data['MA20'] = data['Close'].rolling(20).mean()
