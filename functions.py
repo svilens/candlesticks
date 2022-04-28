@@ -5,6 +5,7 @@ import plotly.graph_objs as go
 import plotly.io as pio
 pio.templates.default = "plotly_dark"
 import time
+from pandas_datareader import data as dr
 
 def line_intersect(Ax1, Ay1, Ax2, Ay2, Bx1, By1, Bx2, By2):
     """ returns a (x, y) tuple or None if there is no intersection """
@@ -23,13 +24,14 @@ def line_intersect(Ax1, Ay1, Ax2, Ay2, Bx1, By1, Bx2, By2):
 
 
 def draw_candlestick(ticker, period='8d', interval='1h'):
-    data = yf.download(tickers=ticker, period=period, interval=interval, threads=False)
+    #data = yf.download(tickers=ticker, period=period, interval=interval, threads=False)
+    data = dr.DataReader(ticker, 'yahoo')
     
     # convert time zone
-    # try:
-    #     data.index = data.index.tz_localize('America/New_York').tz_convert('Europe/Sofia')
-    # except:
-    #     data.index = data.index.tz_convert('Europe/Sofia')
+    try:
+        data.index = data.index.tz_localize('America/New_York').tz_convert('Europe/Sofia')
+    except:
+        data.index = data.index.tz_convert('Europe/Sofia')
     
     data['MA5'] = data['Close'].rolling(5).mean()
     data['MA20'] = data['Close'].rolling(20).mean()
