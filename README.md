@@ -1,5 +1,13 @@
 # Financial markets - Candlesticks
 
-Running on https://candle-sticks.herokuapp.com/. Might need about 30 seconds to wake up.
+This app visualizes various financial instruments' price over time, indicating potentially good moments in time to buy or sell by applying the Golden Cross pattern - where the short-term and long-term moving average lines cross each other.
 
-UPDATE: Currently not working, please only run locally
+# Installation
+```
+pip install requirements.txt
+```
+
+# Run
+```
+python app.py
+```
